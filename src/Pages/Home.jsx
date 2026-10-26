@@ -143,10 +143,10 @@ const Home = () => {
         <title>Rasya Dylan Pratama - Software Engineer</title>
         <meta name="description" content="Website resmi Rasya Dylan Pratama, Software Engineer. Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan." />
      <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ekizr.com" />
+        <link rel="canonical" href="https://dyl4n-portofolio.vercel.app" />
         <meta property="og:title" content="Rasya Dylan Pratama - Software Engineer" />
      <meta property="og:description" content="Website resmi dan portofolio Rasya Dylan Pratama, Software Engineer." />
-        <meta property="og:url" content="https://ekizr.com" />
+        <meta property="og:url" content="https://dyl4n-portofolio.vercel.app" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{`
           {
@@ -154,7 +154,7 @@ const Home = () => {
             "@type": "Person",
             "name": "Rasya Dylan Pratama",
             "jobTitle": "Software Engineer",
-            "url": "https://ekizr.com",
+            "url": "https://dyl4n-portofolio.vercel.app",
             "sameAs": [
               "https://github.com/DYL4N113",
               "https://www.linkedin.com/in/rasyadylanpratama",

@@ -190,7 +190,7 @@ const ProjectDetails = () => {
     );
   }
 
-  const projectUrl = `https://ekizr.com/project/${toSlug(project.Title)}`;
+  const projectUrl = `https://dyl4n-portofolio.vercel.app/project/${toSlug(project.Title)}`;
 
   return (
     <>
@@ -227,7 +227,7 @@ const ProjectDetails = () => {
             "author": {
               "@type": "Person",
               "name": "Rasya Dylan Pratama",
-              "url": "https://ekizr.com"
+              "url": "https://dyl4n-portofolio.vercel.app"
             }
           }
         `}</script>
