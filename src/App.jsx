@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import MouseTrail from "./components/MouseTrail";
 
 const Portofolio = lazy(() => import("./Pages/Portofolio"));
 const ContactPage = lazy(() => import("./Pages/Contact"));
@@ -62,6 +63,7 @@ function App() {
   return (
     
     <HelmetProvider>
+      <MouseTrail />
       <div className="pointer-events-none">
   <AnimatedBackground />
 </div>
