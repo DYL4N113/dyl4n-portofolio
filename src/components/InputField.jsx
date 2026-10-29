@@ -62,7 +62,7 @@ const InputField = ({ field, label, icon: Icon, formData, handleChange }) => {
           className={`
             absolute left-12 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm transition-all duration-300 
             peer-placeholder-shown:top-1/2 peer-placeholder-shown:translate-y-0 
-            peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-base 
+            peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base 
             peer-focus:top-2 peer-focus:translate-y-0 peer-focus:text-gray-200 peer-focus:text-sm
           `}
         >

@@ -159,6 +159,7 @@ const Certificate = ({ ImgSertif }) => {
 					}}>
 					{/* Close Button */}
 					<IconButton
+						aria-label="Close"
 						onClick={handleClose}
 						sx={{
 							position: "absolute",

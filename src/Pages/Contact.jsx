@@ -174,7 +174,7 @@ const ContactPage = () => {
                   value={formData.name}
                   onChange={handleChange}
                   disabled={isSubmitting}
-                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-gray-400/30 transition-all duration-300 hover:border-gray-400/30 disabled:opacity-50"
+                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-gray-400/30 transition-all duration-300 hover:border-gray-400/30 disabled:opacity-50"
                   required
                 />
               </div>
@@ -191,7 +191,7 @@ const ContactPage = () => {
                   value={formData.email}
                   onChange={handleChange}
                   disabled={isSubmitting}
-                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-gray-400/30 transition-all duration-300 hover:border-gray-400/30 disabled:opacity-50"
+                  className="w-full p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-gray-400/30 transition-all duration-300 hover:border-gray-400/30 disabled:opacity-50"
                   required
                 />
               </div>
@@ -207,7 +207,7 @@ const ContactPage = () => {
                   value={formData.message}
                   onChange={handleChange}
                   disabled={isSubmitting}
-                  className="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-gray-400/30 transition-all duration-300 hover:border-gray-400/30 h-[9.9rem] disabled:opacity-50"
+                  className="w-full resize-none p-4 pl-12 bg-white/10 rounded-xl border border-white/20 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-gray-400/30 transition-all duration-300 hover:border-gray-400/30 h-[9.9rem] disabled:opacity-50"
                   required
                 />
               </div>

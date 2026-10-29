@@ -109,7 +109,7 @@ export default function Comments() {
             <h1 className="text-xl sm:text-2xl font-bold text-white">
               Comments
             </h1>
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-400 text-xs">
               {comments.length} total · {pinnedCount} pinned
             </p>
           </div>
@@ -127,7 +127,7 @@ export default function Comments() {
               className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-lg text-xs sm:text-sm transition-all duration-200 ${
                 filter === tab.value
                   ? "bg-gradient-to-r from-indigo-500/25 to-purple-500/20 border border-indigo-500/35 text-white font-medium"
-                  : "text-gray-500 hover:text-gray-300"
+                  : "text-gray-400 hover:text-gray-300"
               }`}
             >
               {tab.label}
@@ -135,7 +135,7 @@ export default function Comments() {
                 className={`px-1.5 py-0.5 rounded-full text-xs ${
                   filter === tab.value
                     ? "bg-indigo-500/25 text-indigo-300"
-                    : "bg-white/8 text-gray-500"
+                    : "bg-white/8 text-gray-400"
                 }`}
               >
                 {tab.count}
@@ -158,7 +158,7 @@ export default function Comments() {
         ].map((stat) => (
           <Card key={stat.label}>
             <div className="p-3 sm:p-4">
-              <p className="text-gray-500 text-xs mb-1">{stat.label}</p>
+              <p className="text-gray-400 text-xs mb-1">{stat.label}</p>
               <p className={`text-xl sm:text-2xl font-bold ${stat.color}`}>
                 {stat.value}
               </p>
@@ -169,7 +169,7 @@ export default function Comments() {
 
       {/* Search bar */}
       <div className="relative">
-        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
+        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
         <input
           type="text"
           value={search}
@@ -180,7 +180,8 @@ export default function Comments() {
         {search && (
           <button
             onClick={() => setSearch("")}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300 transition-colors"
+            aria-label="Clear search"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
@@ -189,7 +190,7 @@ export default function Comments() {
 
       {/* Result count when searching */}
       {search && (
-        <p className="text-xs text-gray-500 -mt-3">
+        <p className="text-xs text-gray-400 -mt-3">
           {filtered.length} result{filtered.length !== 1 ? "s" : ""} for "
           {search}"
         </p>
@@ -204,7 +205,7 @@ export default function Comments() {
         <Card>
           <div className="p-14 text-center">
             <MessageSquare className="w-10 h-10 text-gray-700 mx-auto mb-3" />
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-400 text-sm">
               {search
                 ? "No comments match your search."
                 : filter === "pinned"
@@ -251,7 +252,7 @@ export default function Comments() {
                           <Pin className="w-2.5 h-2.5" /> Pinned
                         </span>
                       )}
-                      <span className="flex items-center gap-1 text-gray-600 text-xs ml-auto shrink-0">
+                      <span className="flex items-center gap-1 text-gray-300 text-xs ml-auto shrink-0">
                         <Calendar className="w-3 h-3" />
                         {formatDate(comment.created_at)}
                       </span>
@@ -270,7 +271,7 @@ export default function Comments() {
                       className={`p-2 rounded-lg border transition-all duration-200 ${
                         comment.is_pinned
                           ? "border-indigo-500/30 bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20"
-                          : "border-white/10 text-gray-500 hover:text-indigo-400 hover:border-indigo-500/25"
+                          : "border-white/10 text-gray-400 hover:text-indigo-400 hover:border-indigo-500/25"
                       }`}
                     >
                       {comment.is_pinned ? (
@@ -281,7 +282,8 @@ export default function Comments() {
                     </button>
                     <button
                       onClick={() => remove(comment.id)}
-                      className="p-2 rounded-lg border border-white/10 text-gray-500 hover:text-red-400 hover:border-red-500/20 hover:bg-red-500/5 transition-all duration-200"
+                      aria-label="Delete comment"
+                      className="p-2 rounded-lg border border-white/10 text-gray-400 hover:text-red-400 hover:border-red-500/20 hover:bg-red-500/5 transition-all duration-200"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
                     </button>
@@ -296,13 +298,14 @@ export default function Comments() {
       {/* Pagination */}
       {totalPages > 1 && (
         <div className="flex items-center justify-between gap-3 pt-2">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-400">
             Showing {(page - 1) * PAGE_SIZE + 1}–
             {Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
           </p>
           <div className="flex items-center gap-1">
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
+              aria-label="Previous page"
               disabled={page === 1}
               className="p-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
             >
@@ -323,7 +326,7 @@ export default function Comments() {
                 p === "..." ? (
                   <span
                     key={`dots-${i}`}
-                    className="px-2 text-gray-600 text-xs"
+                    className="px-2 text-gray-300 text-xs"
                   >
                     …
                   </span>
@@ -344,6 +347,7 @@ export default function Comments() {
 
             <button
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              aria-label="Next page"
               disabled={page === totalPages}
               className="p-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
             >

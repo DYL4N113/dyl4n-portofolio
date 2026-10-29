@@ -56,7 +56,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
                   <ExternalLink className="w-4 h-4" />
                 </a>
               ) : (
-                <span className="text-gray-500 text-sm">
+                <span className="text-gray-400 text-sm">
                   Demo Not Available
                 </span>
               )}
@@ -71,7 +71,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               ) : (
-                <span className="text-gray-500 text-sm">
+                <span className="text-gray-400 text-sm">
                   Details Not Available
                 </span>
               )}

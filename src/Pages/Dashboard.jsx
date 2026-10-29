@@ -34,7 +34,7 @@ export default function Dashboard() {
         </div>
         <div>
           <p className="text-sm font-semibold text-white">Dashboard</p>
-          <p className="text-xs text-gray-500">Admin Panel</p>
+          <p className="text-xs text-gray-400">Admin Panel</p>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ export default function Dashboard() {
 
       {/* Nav */}
       <nav className="flex flex-col gap-1 flex-1 min-h-0">
-        <p className="text-[10px] text-gray-600 uppercase tracking-widest px-3 mb-2 shrink-0">Menu</p>
+        <p className="text-[10px] text-gray-300 uppercase tracking-widest px-3 mb-2 shrink-0">Menu</p>
         {NAV_ITEMS.map(({ to, label, icon: Icon }) => {
           const active = location.pathname.includes(to)
           return (
@@ -71,7 +71,7 @@ export default function Dashboard() {
       {/* Logout */}
       <button
         onClick={handleLogout}
-        className="shrink-0 flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-500 hover:text-red-400 hover:bg-red-500/5 border border-transparent hover:border-red-500/15 transition-all duration-200 text-sm"
+        className="shrink-0 flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-400 hover:text-red-400 hover:bg-red-500/5 border border-transparent hover:border-red-500/15 transition-all duration-200 text-sm"
       >
         <LogOut className="w-4 h-4 shrink-0" />
         Sign Out
@@ -113,6 +113,7 @@ export default function Dashboard() {
         <div className="lg:hidden flex items-center gap-3 px-4 py-3 border-b border-white/8 bg-white/3 backdrop-blur-xl shrink-0">
           <button
             onClick={() => setSidebarOpen(true)}
+            aria-label="Open menu"
             className="p-2 rounded-lg border border-white/10 text-gray-400 hover:text-white transition-colors"
           >
             <Menu className="w-4 h-4" />

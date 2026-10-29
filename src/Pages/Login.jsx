@@ -30,7 +30,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-md">
+      <main className="w-full max-w-md">
         <div className="relative group">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-400 to-gray-300 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-700" />
           <div className="relative bg-white/5 backdrop-blur-xl border border-white/15 rounded-2xl p-8 space-y-7">
@@ -57,7 +57,7 @@ export default function Login() {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     required
-                    className="w-full bg-transparent px-3 py-3 text-gray-100 placeholder-gray-500 text-sm outline-none"
+                    className="w-full bg-transparent px-3 py-3 text-gray-100 placeholder-gray-400 text-sm outline-none"
                   />
                 </div>
               </div>
@@ -72,12 +72,13 @@ export default function Login() {
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                     required
-                    className="w-full bg-transparent px-3 py-3 text-gray-100 placeholder-gray-500 text-sm outline-none"
+                    className="w-full bg-transparent px-3 py-3 text-gray-100 placeholder-gray-400 text-sm outline-none"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(prev => !prev)}
-                    className="mr-4 shrink-0 text-gray-500 hover:text-gray-300 transition-colors"
+                    aria-label={showPassword ? "Hide password" : "Show password"}
+                    className="mr-4 shrink-0 p-2 text-gray-500 hover:text-gray-300 transition-colors"
                   >
                     {showPassword ? (
                       <EyeOff className="w-4 h-4" />
@@ -105,7 +106,7 @@ export default function Login() {
             </form>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

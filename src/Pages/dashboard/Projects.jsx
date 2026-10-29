@@ -128,7 +128,7 @@ const ProjectCard = ({ project, onDelete, onEdit }) => {
                 href={project.Link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1.5 rounded-lg border border-white/10 text-gray-500 hover:text-white hover:border-white/20 transition-colors"
+                className="p-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 transition-colors"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
@@ -138,7 +138,7 @@ const ProjectCard = ({ project, onDelete, onEdit }) => {
                 href={project.Github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1.5 rounded-lg border border-white/10 text-gray-500 hover:text-white hover:border-white/20 transition-colors"
+                className="p-1.5 rounded-lg border border-white/10 text-gray-400 hover:text-white hover:border-white/20 transition-colors"
               >
                 <Github className="w-3.5 h-3.5" />
               </a>
@@ -182,7 +182,8 @@ const Modal = ({ title, onClose, children }) => (
           <button
             type="button"
             onClick={onClose}
-            className="p-1 text-gray-500 hover:text-white transition-colors"
+            aria-label="Close"
+            className="p-1 text-gray-400 hover:text-white transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -295,14 +296,14 @@ const ProjectForm = ({
               />
             ) : (
               <div className="w-24 h-16 rounded-lg bg-white/5 flex items-center justify-center border border-white/10">
-                <ImageIcon className="w-5 h-5 text-gray-600" />
+                <ImageIcon className="w-5 h-5 text-gray-300" />
               </div>
             )}
             <div>
               <p className="text-sm text-gray-300">
                 {preview ? "Change image" : "Click to upload image"}
               </p>
-              <p className="text-xs text-gray-600 mt-0.5">
+              <p className="text-xs text-gray-300 mt-0.5">
                 PNG, JPG, WEBP supported
               </p>
             </div>
@@ -480,7 +481,7 @@ export default function Projects() {
             <h1 className="text-xl sm:text-2xl font-bold text-white">
               Projects
             </h1>
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-400 text-xs">
               {loading ? "Loading..." : `${projects.length} projects total`}
             </p>
           </div>
@@ -534,7 +535,7 @@ export default function Projects() {
         <Card>
           <div className="p-16 text-center">
             <FolderGit2 className="w-10 h-10 text-gray-700 mx-auto mb-3" />
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-400 text-sm">
               No projects yet. Create your first one!
             </p>
           </div>

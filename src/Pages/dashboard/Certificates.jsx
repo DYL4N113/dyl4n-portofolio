@@ -150,7 +150,7 @@ export default function Certificates() {
         </div>
         <div>
           <h1 className="text-xl sm:text-2xl font-bold text-white">Certificates</h1>
-          <p className="text-gray-500 text-xs">
+          <p className="text-gray-400 text-xs">
             {loading ? 'Loading...' : `${certs.length} certificates total`}
           </p>
         </div>
@@ -179,7 +179,7 @@ export default function Certificates() {
                   <ImageIcon className="w-5 h-5 text-indigo-400" />
                 </div>
                 <p className="text-sm text-gray-300">Drag & drop or click to upload</p>
-                <p className="text-xs text-gray-600">PNG, JPG, WEBP supported</p>
+                <p className="text-xs text-gray-300">PNG, JPG, WEBP supported</p>
               </div>
             )}
             <input type="file" accept="image/*" onChange={e => handleFile(e.target.files[0])} className="hidden" />
@@ -190,7 +190,7 @@ export default function Certificates() {
               <p className="text-xs text-gray-400 truncate flex-1">{file.name}</p>
               <div className="flex gap-2 shrink-0">
                 <button onClick={() => { setFile(null); setPreview(null) }}
-                  className="px-3 py-1.5 rounded-xl border border-white/10 text-gray-500 hover:text-white text-xs transition-colors">
+                  className="px-3 py-1.5 rounded-xl border border-white/10 text-gray-400 hover:text-white text-xs transition-colors">
                   Clear
                 </button>
                 <button onClick={uploadImage} disabled={uploading} className="relative group/u">
@@ -217,7 +217,7 @@ export default function Certificates() {
         <Card>
           <div className="p-16 text-center">
             <Award className="w-10 h-10 text-gray-700 mx-auto mb-3" />
-            <p className="text-gray-500 text-sm">No certificates yet.</p>
+            <p className="text-gray-400 text-sm">No certificates yet.</p>
           </div>
         </Card>
       ) : (

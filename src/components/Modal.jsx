@@ -25,6 +25,7 @@ const ProjectCardModal = ({ title, description, link }) => {
           >
             <button
               className="absolute top-4 right-4 rounded-md p-2 hover:bg-gray-800 transition-colors duration-200"
+              aria-label="Close"
               onClick={() => setIsOpen(false)}
             >
               <Eye className="h-5 w-5" />
